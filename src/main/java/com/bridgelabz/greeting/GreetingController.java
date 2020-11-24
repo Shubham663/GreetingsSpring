@@ -18,6 +18,12 @@ public class GreetingController{
             return greetingService.addGreeting(user);
         }
 
+        @GetMapping(value = "/id")
+        public Greeting getGreeting(@RequestParam(value = "id", defaultValue = "1")Long id){
+//            User user = new User();
+//            user.setFirstName(name);
+            return greetingService.getGreetingById(id);
+        }
 //        @PostMapping("/post")
 //    public Greeting postGreeting(@RequestBody Greeting greeting){
 //        return greeting;
