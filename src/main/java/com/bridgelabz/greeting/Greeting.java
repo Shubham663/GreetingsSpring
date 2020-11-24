@@ -1,10 +1,19 @@
 package com.bridgelabz.greeting;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "GREETINGS")
 public class Greeting {
+    @Id
     private String name;
     private long id;
 
     public Greeting() {
+        id=0;
+        name="";
     }
 
     public Greeting(long incrementAndGet, String format) {
